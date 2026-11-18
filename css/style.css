@@ -1,19 +1,116 @@
 body {
-    margin: none;
+    margin: 0;
 }
 
 #con {
     width: 100vw;
     height: 200vh;
     display: grid;
-    grid-template: 7% 30% 5% 1fr 5% 12% / 10% 1fr 20% 10%;
+    grid-template: 7% 30% 5% 30% 11% 5% 12% / 10% 1fr 20% 10%;
     grid-template-areas: "hd hd hd hd"
     "main main main main" ". . . ."
-    ". sec as ." ". . . ." 
+    ". sec a ." ". sec s ." ". . . ." 
     "foot foot foot foot";
+}
+
+#tai {
+    width: 100vw;
+    height: 200vh;
+    display: grid;
+    grid-template: 7% 5% 5% 1fr 5% 12% / 10% 1fr 10%;
+    grid-template-areas: "hd hd hd" ". . ."
+    ". nav ." ". sec ." ". . ." "foot foot foot";
+}
+
+#ner {
+    width: 100vw;
+    height: 200vh;
+    display: grid;
+    grid-template: 7% 5% 8% 1fr 1fr 5% 12% / 10% 1fr 10%;
+    grid-template-areas: "hd hd hd" ". . ." ". art ."
+    ". sec1 ." ". sec2 ." ". . ." "foot foot foot";
 }
 
 header {
     grid-area: hd;
+    background-color: #418B63;
+    display: grid;
+    grid-template-columns: 1fr 65%;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #8C5F42;
+}
+
+#nav {
+    grid-area: nav;
+    corner-shape: scoop;
+    border-radius: 20px;
+}
+
+main {
+    grid-area: main;
+    background-color: #4B8C42;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 35%;
+    padding: 2rem;
+    grid-template-areas: ". ." ". art";
+}
+
+#a {
+    grid-area: a;
+    background-color: #8C4942;
+    margin-bottom: 1rem;
+}
+
+#s {
+    grid-area: s;
+    background-color: #8C4942;
+    margin-top: 1rem;
+}
+
+.sec {
+    grid-area: sec;
+    background-color: #8C5F42;
+    border-radius: 30px;
+    display: grid;
+    grid-template: 1fr 35% / 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+#sell {
+    grid-area: sec;
+    background-color: #4B8C42;
+    border-radius: 30px;
+    margin-top: 2rem;
+    display: grid;
+    grid-template: 5% repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#whole-row {
+    grid-column-start: span 3;
+}
+
+article {
+    background-color: #8C4942;
+    border-radius: 30px;
+}
+
+#arrt {
+    grid-column-start: span 2;
+}
+
+#cle {
+    grid-area: art;
+}
+
+footer {
+    grid-area: foot;
     background-color: #418B63;
 }
