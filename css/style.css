@@ -1,1 +1,19 @@
-/* Här skrivs all din CSS */
+body {
+    margin: none;
+}
+
+#con {
+    width: 100vw;
+    height: 200vh;
+    display: grid;
+    grid-template: 7% 30% 5% 1fr 5% 12% / 10% 1fr 20% 10%;
+    grid-template-areas: "hd hd hd hd"
+    "main main main main" ". . . ."
+    ". sec as ." ". . . ." 
+    "foot foot foot foot";
+}
+
+header {
+    grid-area: hd;
+    background-color: #418B63;
+}
